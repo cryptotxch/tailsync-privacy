@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TailSync – Datenschutzerklärung / Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; line-height: 1.55; }
+  h1 { font-size: 1.6rem; } h2 { font-size: 1.2rem; margin-top: 2rem; } h3 { font-size: 1rem; margin-top: 1.4rem; }
+  .lang { border-top: 1px solid #8884; margin-top: 3rem; padding-top: 1rem; }
+  code { font-size: .92em; }
+</style>
+</head>
+<body>
+
+<h1>TailSync – Datenschutzerklärung</h1>
+<p>Stand: 8. Oktober 2026. Verantwortlich: Ctxch, E-Mail: <a href="mailto:cryptotxch@protonmail.com">cryptotxch@protonmail.com</a>.</p>
+
+<h2>Kurzfassung</h2>
+<p>TailSync verbindet deine eigenen Geräte (Android-Handy und PCs) direkt miteinander. Es gibt
+<strong>keinen Server des Entwicklers</strong>, kein Benutzerkonto, keine Werbung, keine Analyse- oder
+Tracking-Dienste. Der Entwickler erhält keinerlei Daten von dir.</p>
+
+<h2>Welche Daten verarbeitet werden – und wohin sie gehen</h2>
+<p>Alle unten genannten Daten werden ausschließlich <strong>zwischen deinen eigenen, von dir gekoppelten
+Geräten</strong> übertragen – direkt über dein lokales Netzwerk oder über dein eigenes
+Tailscale-Netzwerk. Die Verbindung ist per TLS verschlüsselt und beide Geräte authentifizieren sich
+gegenseitig (Kopplung mit Fingerabdruck-Bestätigung).</p>
+<ul>
+  <li><strong>Zwischenablage</strong> (Texte und Bilder), wenn du etwas kopierst.</li>
+  <li><strong>Dateien</strong>, die du aktiv sendest.</li>
+  <li><strong>Benachrichtigungen</strong> (App-Name, Titel, Text) – nur wenn du den
+    Benachrichtigungszugriff erteilst; Antworten, die du am PC eingibst.</li>
+  <li><strong>Bildschirminhalt, Kamerabild und Ton</strong> – nur während einer von dir gestarteten
+    Bildschirmspiegelung bzw. „Handy als Webcam“-Sitzung; Android zeigt dafür jeweils eine eigene
+    Zustimmungsabfrage.</li>
+  <li><strong>Eingaben zur Fernsteuerung</strong> (Mausbewegungen, Klicks, getippter Text) vom Handy zum PC.</li>
+  <li><strong>Geräteinformationen</strong>: Gerätename, Plattform, Akkustand, Infos zur gerade laufenden
+    Medienwiedergabe.</li>
+</ul>
+
+<h3>Im lokalen Netzwerk sichtbar</h3>
+<p>Damit gekoppelte Geräte sich im selben Netzwerk finden, sendet TailSync regelmäßig eine kleine
+Rundsendung (Broadcast) ins lokale Netzwerk mit Gerätekennung, Gerätename und Plattform. Diese ist für
+andere Geräte im selben lokalen Netzwerk sichtbar, enthält aber keine Inhalte.</p>
+
+<h3>Netzlaufwerk (optional)</h3>
+<p>Wenn du das Netzlaufwerk (WebDAV) einschaltest, kann ein PC mit Benutzername und Passwort auf den
+Speicher des Handys zugreifen. Diese Verbindung ist passwortgeschützt, aber nicht zusätzlich
+verschlüsselt (unverschlüsseltes HTTP innerhalb deines Netzwerks bzw. über Tailscale). Standardmäßig ist
+sie ausgeschaltet.</p>
+
+<h2>Speicherung</h2>
+<p>Auf jedem Gerät speichert TailSync lokal: Einstellungen, die Liste gekoppelter Geräte, den eigenen
+kryptografischen Schlüssel sowie empfangene Dateien im von dir gewählten Ordner (dort landen auch per Zwischenablage empfangene Bilder). Der Verlauf der
+Zwischenablage und gespiegelte Benachrichtigungen werden nur im Arbeitsspeicher gehalten und beim Beenden
+der App gelöscht. Auf Android werden durch Deinstallieren der App alle lokal gespeicherten App-Daten
+entfernt (empfangene Dateien in einem selbst gewählten Ordner bleiben erhalten). Unter Windows liegen
+die App-Daten im Ordner <code>%USERPROFILE%\.tailsync</code>; er bleibt beim Deinstallieren erhalten,
+damit eine Neuinstallation die Kopplungen behält, und kann von Hand gelöscht werden.</p>
+
+<h2>Berechtigungen und wofür sie genutzt werden</h2>
+<ul>
+  <li><strong>Netzwerk</strong>: Verbindung zu deinen gekoppelten Geräten.</li>
+  <li><strong>Benachrichtigungen</strong>: Statusanzeige der Verbindung, „Handy suchen“, Abstandssperre.</li>
+  <li><strong>Kamera / Mikrofon</strong>: nur für „Handy als Webcam“.</li>
+  <li><strong>Bildschirmaufnahme</strong>: nur für die Bildschirmspiegelung, nach Zustimmung.</li>
+  <li><strong>Benachrichtigungszugriff</strong>: nur zum Spiegeln von Benachrichtigungen auf deinen PC.</li>
+  <li><strong>Zugriff auf alle Dateien</strong>: nur für das optionale Netzlaufwerk.</li>
+  <li><strong>Über anderen Apps einblenden</strong>: optionaler Hintergrund-Sync der Zwischenablage und
+    Warnanzeige der Abstandssperre.</li>
+  <li><strong>Geräteadministrator</strong> (nur „Bildschirm sperren“): Abstandssperre und Sperren vom PC
+    aus. TailSync löscht keine Daten und ändert keine Bildschirmsperre.</li>
+</ul>
+
+<h3>Windows-App</h3>
+<ul>
+  <li><strong>Zwischenablage</strong>: wird überwacht, solange TailSync läuft, um Änderungen an deine
+    gekoppelten Geräte zu senden.</li>
+  <li><strong>Tastatur- und Mauseingaben</strong>: TailSync erzeugt Eingaben nur, wenn du den PC vom
+    gekoppelten Handy aus steuerst; es liest keine Tastatureingaben mit.</li>
+  <li><strong>Medienwiedergabe</strong>: Titel, Interpret, Cover und Fortschritt der laufenden Wiedergabe
+    werden für die Anzeige auf dem Handy ausgelesen.</li>
+  <li><strong>Kameratreiber (optional)</strong>: Für „Handy als Webcam“ wird nach deiner Bestätigung ein
+    virtueller Kameratreiber („TailSync Camera“) installiert. Er gibt nur das Bild deines Handys weiter
+    und lässt sich unter „Installierte Apps“ oder in den TailSync-Einstellungen entfernen.</li>
+  <li><strong>Autostart (optional)</strong>: nur wenn du „Beim Anmelden starten“ einschaltest.</li>
+</ul>
+
+<h2>Dienste Dritter</h2>
+<p>TailSync enthält keine Dienste Dritter. Wenn du Tailscale verwendest, ist das eine separate App mit
+eigener Datenschutzerklärung; TailSync nutzt lediglich das von Tailscale bereitgestellte Netzwerk.</p>
+
+<h2>Kinder</h2>
+<p>TailSync richtet sich nicht an Kinder.</p>
+
+<h2>Kontakt und Änderungen</h2>
+<p>Fragen zum Datenschutz: <a href="mailto:cryptotxch@protonmail.com">cryptotxch@protonmail.com</a>. Änderungen dieser Erklärung werden auf dieser Seite veröffentlicht.</p>
+
+<div class="lang" lang="en">
+<h1>TailSync – Privacy Policy</h1>
+<p>Last updated: October 8, 2026. Contact: Ctxch, <a href="mailto:cryptotxch@protonmail.com">cryptotxch@protonmail.com</a>.</p>
+
+<h2>Summary</h2>
+<p>TailSync connects your own devices (Android phone and PCs) directly with each other. There is
+<strong>no developer server</strong>, no account, no ads, no analytics or tracking. The developer
+receives no data from you.</p>
+
+<h2>What data is processed – and where it goes</h2>
+<p>All data below is transferred only <strong>between your own paired devices</strong>, directly over
+your local network or your own Tailscale network. Connections are TLS-encrypted and both devices
+authenticate each other (pairing with fingerprint confirmation).</p>
+<ul>
+  <li><strong>Clipboard</strong> (text and images) when you copy something.</li>
+  <li><strong>Files</strong> you actively send.</li>
+  <li><strong>Notifications</strong> (app name, title, text) – only if you grant notification access;
+    replies you type on the PC.</li>
+  <li><strong>Screen content, camera image and audio</strong> – only during a screen-mirror or
+    phone-as-webcam session you start; Android shows its own consent prompt for each.</li>
+  <li><strong>Remote-control input</strong> (mouse movement, clicks, typed text) from phone to PC.</li>
+  <li><strong>Device information</strong>: device name, platform, battery level, currently playing media.</li>
+</ul>
+<h3>Visible on the local network</h3>
+<p>So paired devices can find each other, TailSync periodically broadcasts a small message on the local
+network containing a device ID, device name and platform. Other devices on the same local network can
+see it; it contains no content.</p>
+<h3>Network drive (optional)</h3>
+<p>If you enable the network drive (WebDAV), a PC can access the phone's storage with a user name and
+password. It is password-protected but not additionally encrypted (plain HTTP within your network or
+over Tailscale). It is off by default.</p>
+
+<h2>Storage</h2>
+<p>Each device stores locally: settings, the list of paired devices, its own cryptographic key, and
+received files in the folder you choose (images received via the clipboard are saved there too). Clipboard history and mirrored notifications are kept in memory
+only and cleared when the app exits. On Android, uninstalling removes all locally stored app data
+(received files in a folder you chose remain). On Windows, app data lives in
+<code>%USERPROFILE%\.tailsync</code>; it is kept on uninstall so a reinstall keeps your pairings, and can
+be deleted by hand.</p>
+
+<h2>Permissions</h2>
+<p>Network (connect to your devices); notifications (connection status, find my phone, proximity lock);
+camera/microphone (phone as webcam only); screen capture (screen mirroring only, after consent);
+notification access (mirroring notifications to your PC only); all files access (optional network drive
+only); display over other apps (optional background clipboard sync and proximity-lock warning); device
+admin with the "lock screen" policy only (proximity lock and locking from your PC – TailSync never wipes
+data or changes your screen lock).</p>
+
+<h3>Windows app</h3>
+<p>Clipboard: monitored while TailSync runs, to send changes to your paired devices. Keyboard and mouse:
+TailSync only generates input when you control the PC from your paired phone; it does not record
+keystrokes. Media playback: title, artist, cover art and progress of what's playing are read for display
+on your phone. Camera driver (optional): for "phone as webcam", a virtual camera driver ("TailSync
+Camera") is installed after you confirm; it only passes on your phone's image and can be removed under
+Installed apps or in TailSync's settings. Autostart (optional): only if you turn on "Launch at login".</p>
+
+<h2>Third parties</h2>
+<p>TailSync contains no third-party services. Tailscale, if you use it, is a separate app with its own
+privacy policy; TailSync only uses the network it provides.</p>
+
+<h2>Children</h2>
+<p>TailSync is not directed at children.</p>
+
+<h2>Contact and changes</h2>
+<p>Privacy questions: <a href="mailto:cryptotxch@protonmail.com">cryptotxch@protonmail.com</a>. Changes to this policy will be published on this page.</p>
+</div>
+
+</body>
+</html>
