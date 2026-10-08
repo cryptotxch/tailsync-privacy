@@ -9,7 +9,8 @@ Stand: 8. Oktober 2026. Verantwortlich: Ctxch, E-Mail: cryptotxch@protonmail.com
 Kurzfassung
 TailSync verbindet deine eigenen Geräte (Android-Handy und PCs) direkt miteinander. Es gibt keinen Server des Entwicklers, kein Benutzerkonto, keine Werbung, keine Analyse- oder Tracking-Dienste. Der Entwickler erhält keinerlei Daten von dir.
 
-Welche Daten verarbeitet werden – und wohin sie gehen
+Welche Daten verarbeitet werden –und wohin sie gehen
+
 Alle unten genannten Daten werden ausschließlich zwischen deinen eigenen, von dir gekoppelten Geräten übertragen – direkt über dein lokales Netzwerk oder über dein eigenes Tailscale-Netzwerk. Die Verbindung ist per TLS verschlüsselt und beide Geräte authentifizieren sich gegenseitig (Kopplung mit Fingerabdruck-Bestätigung).
 
 • Zwischenablage (Texte und Bilder), wenn du etwas kopierst.
@@ -29,6 +30,7 @@ Speicherung
 Auf jedem Gerät speichert TailSync lokal: Einstellungen, die Liste gekoppelter Geräte, den eigenen kryptografischen Schlüssel sowie empfangene Dateien im von dir gewählten Ordner (dort landen auch per Zwischenablage empfangene Bilder). Der Verlauf der Zwischenablage und gespiegelte Benachrichtigungen werden nur im Arbeitsspeicher gehalten und beim Beenden der App gelöscht. Auf Android werden durch Deinstallieren der App alle lokal gespeicherten App-Daten entfernt (empfangene Dateien in einem selbst gewählten Ordner bleiben erhalten). Unter Windows liegen die App-Daten im Ordner %USERPROFILE%\.tailsync; er bleibt beim Deinstallieren erhalten, damit eine Neuinstallation die Kopplungen behält, und kann von Hand gelöscht werden.
 
 Berechtigungen und wofür sie genutzt werden
+
 • Netzwerk: Verbindung zu deinen gekoppelten Geräten.
 • Benachrichtigungen: Statusanzeige der Verbindung, „Handy suchen“, Abstandssperre.
 • Kamera / Mikrofon: nur für „Handy als Webcam“.
@@ -65,6 +67,7 @@ Summary
 TailSync connects your own devices (Android phone and PCs) directly with each other. There is no developer server, no account, no ads, no analytics or tracking. The developer receives no data from you.
 
 What data is processed – and where it goes
+
 All data below is transferred only between your own paired devices, directly over your local network or your own Tailscale network. Connections are TLS-encrypted and both devices authenticate each other (pairing with fingerprint confirmation).
 
 • Clipboard (text and images) when you copy something.
